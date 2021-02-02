@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-
-        {% block javascripts %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    {% block stylesheets %}{% endblock %} {% block javascripts %}{% endblock %}
+  </head>
+  <body>
+    <nav>
+      <a href="{{ path('home') }}">Accueil</a>
+      <a href="{{ path('apropos') }}">A propos</a>
+      <a href="{{ path('nombre', { id: 1 }) }}">Nombre 1</a>
+      <a href="{{ path('nombre', { id: 2 }) }}">Nombre 2</a>
+      <a href="{{ path('chateaux') }}">Chateaux</a>
+    </nav>
+    {% block body %}{% endblock %}
+  </body>
 </html>

@@ -1,0 +1,7 @@
+{% extends "base.html.twig" %} {% block body %} {% for chateau in chateaux %}
+<div>
+  <p>L'id du chateau est : {{ chateau["id"] }}</p>
+  <p>{{ chateau["titre"] }}</p>
+  <a href="{{ path('chateau', { id: chateau['id'] }) }}">Voir le chateau</a>
+</div>
+{% endfor %} {% endblock %}
