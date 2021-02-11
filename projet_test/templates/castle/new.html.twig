@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Castle{% endblock %}
+
+{% block body %}
+    <h1>Create new Castle</h1>
+
+    {{ include('castle/_form.html.twig') }}
+
+    <a href="{{ path('castle_index') }}">back to list</a>
+{% endblock %}

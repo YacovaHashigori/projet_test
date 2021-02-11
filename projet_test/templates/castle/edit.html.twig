@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Castle{% endblock %}
+
+{% block body %}
+    <h1>Edit Castle</h1>
+
+    {{ include('castle/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('castle_index') }}">back to list</a>
+
+    {{ include('castle/_delete_form.html.twig') }}
+{% endblock %}

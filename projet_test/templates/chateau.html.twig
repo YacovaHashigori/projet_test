@@ -1,6 +1,7 @@
 {% extends "base.html.twig" %} {% block body %}
 <div>
-  <p>L'id du chateau est : {{ chateaux["id"] }}</p>
-  <p>{{ chateaux["titre"] }}</p>
+  <p>{{ chateau.name }}</p>
+  <p>{{ chateau.description }}</p>
+  <img src="{{ chateau.picture }}" alt="image du chateau">
 </div>
 {% endblock %}
